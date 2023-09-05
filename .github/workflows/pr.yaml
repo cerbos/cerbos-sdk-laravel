@@ -1,0 +1,74 @@
+---
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'v*'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: [ '8.2' ]
+        experimental: [ false ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: xdebug
+          extensions: "grpc"
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Lint
+        shell: bash
+        run: make lint
+
+  validate-composer:
+    name: Validate composer.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate
+        shell: bash
+        run: make validate-composer
+
+  unit-tests:
+    name: Unit Test
+    needs: [ "lint" ]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: [ '8.2' ]
+        experimental: [ false ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: xdebug
+          extensions: "grpc"
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run unit tests
+        shell: bash
+        run: make test

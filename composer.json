@@ -1,0 +1,52 @@
+{
+    "name": "cerbos/cerbos-sdk-laravel",
+    "description": "Cerbos PHP Laravel SDK for interacting with the Cerbos PDP",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Cerbos",
+            "homepage": "https://cerbos.dev"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cerbos/cerbos-sdk-laravel/issues"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "keywords": [
+        "laravel",
+        "cerbos",
+        "permission",
+        "access-control",
+        "authorization",
+        "authz"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cerbos\\Sdk\\Laravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cerbos\\Sdk\\Laravel\\Test\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.21",
+        "cerbos/cerbos-sdk-php": "^1.1"
+    },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "phpunit/phpunit": "^10.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cerbos\\Sdk\\Laravel\\CerbosServiceProvider"
+            ]
+        }
+    }
+}
