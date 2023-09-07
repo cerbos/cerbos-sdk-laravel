@@ -19,8 +19,8 @@
     }
   ],
   "labels": [
-    "chore",
-    "ci",
-    "bots"
+    "area/deps",
+    "bots",
+    "kind/chore"
   ]
 }
