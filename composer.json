@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cerbos\\Sdk\\Laravel\\CerbosServiceProvider"
+                "Cerbos\\Sdk\\Laravel\\Provider\\CerbosServiceProvider"
             ]
         }
     }
