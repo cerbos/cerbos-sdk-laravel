@@ -21,7 +21,7 @@ class CerbosServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . './../../config/cerbos.php', 'cerbos');
+        $this->mergeConfigFrom(__DIR__ .  DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config'. DIRECTORY_SEPARATOR . 'cerbos.php', 'cerbos');
         $this->app->singleton(CerbosClient::class, function () {
             $caCert = File::get($this->app['config']['cerbos.caCertPath']);
             $tlsCert = File::get($this->app['config']['cerbos.tlsCertPath']);
