@@ -23,19 +23,29 @@ class CerbosServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ .  DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config'. DIRECTORY_SEPARATOR . 'cerbos.php', 'cerbos');
         $this->app->singleton(CerbosClient::class, function () {
-            $caCert = File::get($this->app['config']['cerbos.caCertPath']);
-            $tlsCert = File::get($this->app['config']['cerbos.tlsCertPath']);
-            $tlsKey = File::get($this->app['config']['cerbos.tlsKeyPath']);
+            $caCert = '';
+            $tlsCert = '';
+            $tlsKey = '';
+            if (isset($this->app['config']['cerbos.caCertPath']) && $this->app['config']['cerbos.caCertPath'] != '') {
+                $caCert = File::get($this->app['config']['cerbos.caCertPath']);
+            }
+
+            if (isset($this->app['config']['cerbos.tlsCertPath']) && $this->app['config']['cerbos.tlsCertPath'] != '') {
+                $tlsCert = File::get($this->app['config']['cerbos.tlsCertPath']);            }
+
+            if (isset($this->app['config']['cerbos.tlsKeyPath']) && $this->app['config']['cerbos.tlsKeyPath'] != '') {
+                $tlsKey = File::get($this->app['config']['cerbos.tlsKeyPath']);
+            }
 
             $cb = CerbosClientBuilder::newInstance($this->app['config']['cerbos.host'] .':'. $this->app['config']['cerbos.port'])
                 ->withPlaintext($this->app['config']['cerbos.plaintext']);
-            if ($caCert) {
+            if ($caCert != '') {
                 $cb = $cb->withCaCertificate($caCert);
             }
-            if ($tlsCert) {
+            if ($tlsCert != '') {
                 $cb = $cb->withTlsCertificate($tlsCert);
             }
-            if ($tlsKey) {
+            if ($tlsKey != '') {
                 $cb = $cb->withTlsKey($tlsKey);
             }
 
