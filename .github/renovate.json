@@ -13,9 +13,14 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["composer", "github-actions"],
-      "groupName": "Dependencies",
-      "groupSlug": "deps"
+      "matchManagers": ["composer"],
+      "groupName": "PHP deps",
+      "groupSlug": "php-deps"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions deps",
+      "groupSlug": "gh-actions-deps"
     }
   ],
   "labels": [

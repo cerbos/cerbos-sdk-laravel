@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: [ '8.2' ]
+        php-version: [ '8.3', '8.4' ]
         experimental: [ false ]
 
     steps:
@@ -35,6 +35,17 @@ jobs:
         shell: bash
         run: make lint
 
+      - name: Check repo status
+        shell: bash
+        run: |
+          repo_status=$(git status --porcelain)
+          if [[ ! -z "${repo_status}" ]]; then
+            echo "::error::Uncommitted changes detected"
+            echo "${repo_status}"
+            git status -vv
+            exit 1
+          fi
+
   validate-composer:
     name: Validate composer.json
     runs-on: ubuntu-latest
@@ -53,7 +64,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: [ '8.2' ]
+        php-version: [ '8.3', '8.4' ]
         experimental: [ false ]
     steps:
       - name: Checkout repository
@@ -72,3 +83,14 @@ jobs:
       - name: Run unit tests
         shell: bash
         run: make test
+      
+      - name: Check repo status
+        shell: bash
+        run: |
+          repo_status=$(git status --porcelain)
+          if [[ ! -z "${repo_status}" ]]; then
+            echo "::error::Uncommitted changes detected"
+            echo "${repo_status}"
+            git status -vv
+            exit 1
+          fi
