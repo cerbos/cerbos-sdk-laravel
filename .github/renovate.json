@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     "group:allNonMajor",
     "schedule:weekly",
     ":automergeDisabled",
@@ -13,12 +13,16 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["composer"],
+      "matchManagers": [
+        "composer"
+      ],
       "groupName": "PHP deps",
       "groupSlug": "php-deps"
     },
     {
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "groupName": "GitHub Actions deps",
       "groupSlug": "gh-actions-deps"
     }
