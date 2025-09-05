@@ -8,18 +8,17 @@ on:
       - 'v*'
 
 jobs:
-  lint:
-    name: Lint
+  validate-lint-and-unit-test:
+    name: Run validation, linters and unit tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         php-version: [ '8.3', '8.4' ]
         experimental: [ false ]
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -27,8 +26,13 @@ jobs:
           php-version: ${{ matrix.php-version }}
           coverage: xdebug
           extensions: "grpc"
-
+      
+      - name: Validate
+        shell: bash
+        run: make validate-composer
+      
       - name: Install dependencies
+        shell: bash
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Lint
@@ -45,52 +49,7 @@ jobs:
             git status -vv
             exit 1
           fi
-
-  validate-composer:
-    name: Validate composer.json
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Validate
-        shell: bash
-        run: make validate-composer
-
-  unit-tests:
-    name: Unit Test
-    needs: [ "lint" ]
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: [ '8.3', '8.4' ]
-        experimental: [ false ]
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-version }}
-          coverage: xdebug
-          extensions: "grpc"
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
-
+      
       - name: Run unit tests
         shell: bash
         run: make test
-      
-      - name: Check repo status
-        shell: bash
-        run: |
-          repo_status=$(git status --porcelain)
-          if [[ ! -z "${repo_status}" ]]; then
-            echo "::error::Uncommitted changes detected"
-            echo "${repo_status}"
-            git status -vv
-            exit 1
-          fi
