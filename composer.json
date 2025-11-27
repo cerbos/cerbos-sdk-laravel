@@ -35,12 +35,12 @@
   },
   "require": {
     "php": "^8.3 || ^8.4",
-    "cerbos/cerbos-sdk-php": "v1.10.1",
-    "illuminate/support": "v12.39.0"
+    "cerbos/cerbos-sdk-php": "^v1.10",
+    "illuminate/support": "^v12.40"
   },
   "require-dev": {
-    "php-parallel-lint/php-parallel-lint": "1.4.0",
-    "phpunit/phpunit": "12.4.4"
+    "php-parallel-lint/php-parallel-lint": "^1.4",
+    "phpunit/phpunit": "^12.4"
   },
   "extra": {
     "laravel": {
