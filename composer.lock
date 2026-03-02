@@ -137,16 +137,16 @@
         },
         {
             "name": "cerbos/cerbos-sdk-php",
-            "version": "v1.10.4",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cerbos/cerbos-sdk-php.git",
-                "reference": "ed993d3d8312827b0901d7a5c07998eaca35f4e1"
+                "reference": "b009ede2b25377ce1f6e2c9f4b8757e0e4d9656f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/ed993d3d8312827b0901d7a5c07998eaca35f4e1",
-                "reference": "ed993d3d8312827b0901d7a5c07998eaca35f4e1",
+                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/b009ede2b25377ce1f6e2c9f4b8757e0e4d9656f",
+                "reference": "b009ede2b25377ce1f6e2c9f4b8757e0e4d9656f",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.4",
                 "phpstan/phpstan": "^2.1",
-                "phpunit/phpunit": "^12.5",
+                "phpunit/phpunit": "^13.0",
                 "vimeo/psalm": "^6.15"
             },
             "type": "library",
@@ -191,9 +191,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cerbos/cerbos-sdk-php/issues",
-                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.10.4"
+                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.11.0"
             },
-            "time": "2026-02-06T12:43:04+00:00"
+            "time": "2026-03-02T12:15:52+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -685,16 +685,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v12.51.0",
+            "version": "v12.53.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "fcc84cf4fba138f1835d6a5978ac4434f11a55aa"
+                "reference": "18d7d75366ddb9eded3b7f05173f791da47faf34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/fcc84cf4fba138f1835d6a5978ac4434f11a55aa",
-                "reference": "fcc84cf4fba138f1835d6a5978ac4434f11a55aa",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/18d7d75366ddb9eded3b7f05173f791da47faf34",
+                "reference": "18d7d75366ddb9eded3b7f05173f791da47faf34",
                 "shasum": ""
             },
             "require": {
@@ -761,7 +761,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-02-10T16:02:09+00:00"
+            "time": "2026-02-23T15:44:06+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2508,16 +2508,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.0.2",
+            "version": "13.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "87f0ca577a7056016741af70e7a7de9246c52e67"
+                "reference": "d57826e8921a534680c613924bfd921ded8047f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/87f0ca577a7056016741af70e7a7de9246c52e67",
-                "reference": "87f0ca577a7056016741af70e7a7de9246c52e67",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d57826e8921a534680c613924bfd921ded8047f4",
+                "reference": "d57826e8921a534680c613924bfd921ded8047f4",
                 "shasum": ""
             },
             "require": {
@@ -2586,7 +2586,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.0.2"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.0.5"
             },
             "funding": [
                 {
@@ -2610,7 +2610,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-10T12:33:24+00:00"
+            "time": "2026-02-18T12:40:03+00:00"
         },
         {
             "name": "sebastian/cli-parser",
