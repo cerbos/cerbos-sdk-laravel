@@ -36,7 +36,7 @@
   "require": {
     "php": "^8.4",
     "cerbos/cerbos-sdk-php": "^v1.10",
-    "illuminate/support": "^v12.40"
+    "illuminate/support": "^v13.0.0"
   },
   "require-dev": {
     "php-parallel-lint/php-parallel-lint": "^1.4",
