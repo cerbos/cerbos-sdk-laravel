@@ -34,7 +34,7 @@
     }
   },
   "require": {
-    "php": "^8.4",
+    "php": "~8.4.0 || ~8.5.0",
     "cerbos/cerbos-sdk-php": "^v1.10",
     "illuminate/support": "^v13.0.0"
   },

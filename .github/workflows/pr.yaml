@@ -19,8 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
-        php-version: ["8.4"]
+        php-version: ["8.4", "8.5"]
         experimental: [false]
     steps:
       - name: Check out repository
