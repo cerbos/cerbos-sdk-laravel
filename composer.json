@@ -36,6 +36,8 @@
   "require": {
     "php": "~8.4.0 || ~8.5.0",
     "cerbos/cerbos-sdk-php": "^v1.10",
+    "illuminate/contracts": "^v13.0.0",
+    "illuminate/database": "^v13.0.0",
     "illuminate/support": "^v13.0.0"
   },
   "require-dev": {
@@ -46,7 +48,11 @@
     "laravel": {
       "providers": [
         "Cerbos\\Sdk\\Laravel\\Provider\\CerbosServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "Cerbos": "Cerbos\\Sdk\\Laravel\\Facades\\Cerbos",
+        "CerbosQueryPlan": "Cerbos\\Sdk\\Laravel\\Facades\\CerbosQueryPlan"
+      }
     }
   }
 }
