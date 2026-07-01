@@ -136,16 +136,16 @@
         },
         {
             "name": "cerbos/cerbos-sdk-php",
-            "version": "v1.12.3",
+            "version": "v1.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cerbos/cerbos-sdk-php.git",
-                "reference": "316f980b75a85c9bc4076e48ac121f445f03b4a5"
+                "reference": "bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/316f980b75a85c9bc4076e48ac121f445f03b4a5",
-                "reference": "316f980b75a85c9bc4076e48ac121f445f03b4a5",
+                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9",
+                "reference": "bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9",
                 "shasum": ""
             },
             "require": {
@@ -161,6 +161,8 @@
                 "php-parallel-lint/php-parallel-lint": "^1.4",
                 "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^13.0",
+                "symfony/http-client": "^8.1",
+                "testcontainers/testcontainers": "^1.0",
                 "vimeo/psalm": "^6.15"
             },
             "type": "library",
@@ -190,9 +192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cerbos/cerbos-sdk-php/issues",
-                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.12.3"
+                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.12.4"
             },
-            "time": "2026-06-01T16:53:32+00:00"
+            "time": "2026-07-01T09:28:30+00:00"
         },
         {
             "name": "doctrine/inflector",
