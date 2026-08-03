@@ -136,16 +136,16 @@
         },
         {
             "name": "cerbos/cerbos-sdk-php",
-            "version": "v1.12.4",
+            "version": "v1.12.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cerbos/cerbos-sdk-php.git",
-                "reference": "bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9"
+                "reference": "403bce7cbc24783f32de047d0fdf5c5c44e901ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9",
-                "reference": "bf6d6e2f4bbe0ce9da2fa6f6dedc848cab74d8f9",
+                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/403bce7cbc24783f32de047d0fdf5c5c44e901ea",
+                "reference": "403bce7cbc24783f32de047d0fdf5c5c44e901ea",
                 "shasum": ""
             },
             "require": {
@@ -192,9 +192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cerbos/cerbos-sdk-php/issues",
-                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.12.4"
+                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.12.5"
             },
-            "time": "2026-07-01T09:28:30+00:00"
+            "time": "2026-08-03T10:47:57+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -686,16 +686,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v13.20.0",
+            "version": "v13.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "2852f5378f185116034c091c049658760c691e1e"
+                "reference": "c44c62550a18912175966ba340345ffd800ac54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/2852f5378f185116034c091c049658760c691e1e",
-                "reference": "2852f5378f185116034c091c049658760c691e1e",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/c44c62550a18912175966ba340345ffd800ac54f",
+                "reference": "c44c62550a18912175966ba340345ffd800ac54f",
                 "shasum": ""
             },
             "require": {
@@ -761,7 +761,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-07-13T15:58:32+00:00"
+            "time": "2026-07-26T13:08:33+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2508,16 +2508,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.2.4",
+            "version": "13.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8f5180f4627fc1978be2f61d8d9979dbe37e0c10"
+                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8f5180f4627fc1978be2f61d8d9979dbe37e0c10",
-                "reference": "8f5180f4627fc1978be2f61d8d9979dbe37e0c10",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5d2afe181339a56348ef9a80fa7eb806b7eae508",
+                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508",
                 "shasum": ""
             },
             "require": {
@@ -2540,7 +2540,7 @@
                 "sebastian/comparator": "^8.3.0",
                 "sebastian/diff": "^9.0",
                 "sebastian/environment": "^9.3.2",
-                "sebastian/exporter": "^8.1.0",
+                "sebastian/exporter": "^8.1.1",
                 "sebastian/file-filter": "^1.0",
                 "sebastian/git-state": "^1.0",
                 "sebastian/global-state": "^9.0.1",
@@ -2588,7 +2588,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.2.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.2.6"
             },
             "funding": [
                 {
@@ -2596,7 +2596,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-07-08T08:36:51+00:00"
+            "time": "2026-07-28T14:00:09+00:00"
         },
         {
             "name": "sebastian/cli-parser",
