@@ -46,7 +46,7 @@ jobs:
         run: make lint
 
       - name: Check repo status
-        uses: cerbos/actions/check-repo-status@db2ff6efa4315796b92eec00847c9257b89fae5c # main
+        uses: cerbos/actions/check-repo-status@c19f023116079958e91290ea4af73e25296d7614 # main
 
       - name: Run unit tests
         run: make test
