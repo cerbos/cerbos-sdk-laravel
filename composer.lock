@@ -142,16 +142,16 @@
         },
         {
             "name": "cerbos/cerbos-sdk-php",
-            "version": "v1.13.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cerbos/cerbos-sdk-php.git",
-                "reference": "048bceebfd8769b8c3f6e04196985ecb5aca65dd"
+                "reference": "536f70a56bc26de4b11ef113f1373047e6be8040"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/048bceebfd8769b8c3f6e04196985ecb5aca65dd",
-                "reference": "048bceebfd8769b8c3f6e04196985ecb5aca65dd",
+                "url": "https://api.github.com/repos/cerbos/cerbos-sdk-php/zipball/536f70a56bc26de4b11ef113f1373047e6be8040",
+                "reference": "536f70a56bc26de4b11ef113f1373047e6be8040",
                 "shasum": ""
             },
             "require": {
@@ -198,9 +198,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cerbos/cerbos-sdk-php/issues",
-                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.13.0"
+                "source": "https://github.com/cerbos/cerbos-sdk-php/tree/v1.13.1"
             },
-            "time": "2026-08-07T12:17:10+00:00"
+            "time": "2026-10-02T09:52:46+00:00"
         },
         {
             "name": "doctrine/inflector",
